@@ -1,7 +1,7 @@
-package PR;
+package PR.PicturePack;
 
-public class MyPictureVersion1 extends MyPictureVersion0 {
-    MyPictureVersion1(int n, int m) {
+public class MyPictureV1_DivPerChar extends MyPictureV0_NoDiv {
+    MyPictureV1_DivPerChar(int n, int m) {
         super(n, m);
     }
 

@@ -1,6 +1,5 @@
-package PR;
+package PR.PicturePack;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class MyPictureBaseClass {
@@ -12,7 +11,6 @@ public class MyPictureBaseClass {
     int size_m;
     char[][] pictureCharArray;
     int[] histogramIntArray = new int[histogramSize];
-    ArrayList<Integer> changedState;
     //endregion fields
 
     MyPictureBaseClass(int n, int m) {

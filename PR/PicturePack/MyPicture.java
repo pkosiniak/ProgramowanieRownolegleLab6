@@ -1,6 +1,6 @@
-package PR;
+package PR.PicturePack;
 
-public class MyPicture extends MyPictureVersion3 {
+public class MyPicture extends MyPictureV5_DivPerPixel {
 
     public MyPicture(int n, int m) {
         super(n, m);

@@ -1,6 +1,10 @@
 package PR;
 
-class Version2 {
+import PR.PicturePack.MyPicture;
+import PR.ThreadPack.HistogramThread;
+import PR.ThreadPack.HistogramThread_v2_PerCharBlock;
+
+class Version2_ThPerCharBlock {
     static void v2(int numberOfThreads, MyPicture picture) {
 
         var partial = (double) picture.getHistogramIntArray().length / numberOfThreads;
@@ -10,7 +14,7 @@ class Version2 {
         var histogramThArray = new HistogramThread[numberOfThreads];
 
         for (var i = 0; i < numberOfThreads; i++) {
-            (histogramThArray[i] = new HistogramThread2(i, (int) partial, picture)).start();
+            (histogramThArray[i] = new HistogramThread_v2_PerCharBlock(i, (int) partial, picture)).start();
         }
 
         for (var i = 0; i < numberOfThreads; i++) {

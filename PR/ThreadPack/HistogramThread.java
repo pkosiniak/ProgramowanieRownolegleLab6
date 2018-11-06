@@ -1,4 +1,4 @@
-package PR;
+package PR.ThreadPack;
 
 public interface HistogramThread {
     void start();

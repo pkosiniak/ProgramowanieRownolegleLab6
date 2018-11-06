@@ -1,12 +1,14 @@
-package PR;
+package PR.ThreadPack;
 
-public class HistogramThread3 implements Runnable, HistogramThread {
+import PR.PicturePack.MyPicture;
+
+public class HistogramThread_v4_PerColumn implements Runnable, HistogramThread {
 
     private Thread myThread;
     private int myTaskNumber;
     private MyPicture picture;
 
-    public HistogramThread3(int taskNumber, MyPicture picture) {
+    public HistogramThread_v4_PerColumn(int taskNumber, MyPicture picture) {
         this.picture = picture;
         this.myTaskNumber = taskNumber;
 
@@ -24,9 +26,8 @@ public class HistogramThread3 implements Runnable, HistogramThread {
     @Override
     public void run() {
         synchronized (picture) {
-            picture.calculateHistogramPartByPicture(myTaskNumber);
-            picture.printHistogramPartByPicture();
-
+            picture.calculateHistogramPartByPictureVertical(myTaskNumber);
+            picture.printHistogramPartByPictureVertical();
         }
     }
 }
