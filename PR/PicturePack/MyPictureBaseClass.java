@@ -40,6 +40,11 @@ public class MyPictureBaseClass {
     public int[] getHistogramIntArray() {
         return histogramIntArray;
     }
+
+    public char[][] getPictureCharArray() {
+        return pictureCharArray;
+    }
+
     //endregion init
 
 

@@ -19,11 +19,11 @@ class Version3_ThPerLine {
             }
     }
 
-    static void v3Seq(int numberOfThreads, MyPicture picture){
+    static void v3Seq(int numberOfThreads, MyPicture picture) {
         var histogramThArray = new HistogramThread[numberOfThreads];
 
         for (var i = 0; i < numberOfThreads; i++)
-            (histogramThArray[i] = new HistogramThread_v3_PerLine(i, picture)).start();
+            (histogramThArray[i] = new HistogramThread_v3_PerLine(i, numberOfThreads, picture)).start();
 
         for (var i = 0; i < numberOfThreads; i++)
             try {
@@ -31,4 +31,5 @@ class Version3_ThPerLine {
             } catch (InterruptedException ignored) {
             }
     }
+
 }
