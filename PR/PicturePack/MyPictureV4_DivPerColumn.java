@@ -39,5 +39,4 @@ public class MyPictureV4_DivPerColumn extends MyPictureV3_DivPerLine {
                         this.histogramIntArray[k]++;
                     }
     }
-
 }

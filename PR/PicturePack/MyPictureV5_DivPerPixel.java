@@ -20,14 +20,12 @@ public class MyPictureV5_DivPerPixel extends MyPictureV4_DivPerColumn {
 
     public void printHistPartByPicBlock() {
         for (var i : changedState) {
-            System.out.print("{" + Thread.currentThread().getName() + "} [" /*  */
+            System.out.print("{" + Thread.currentThread().getName() + "} ["
                     + String.format("%03d", i + 33) + "] "
                     + (char) (i + 33) + " "
                     + charsForNumberOfOccurrences(histogramIntArray[i]) + "\n");
         }
-        changedState.clear();
     }
-
 
     public void calculateHistPartByPictureBlock(int nStart, int mStart, int nStop, int mStop) {
         for (var i = nStart; i < nStop && i < this.size_n; i++) {

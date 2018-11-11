@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Histogram_test {
 
-
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
 
@@ -27,12 +26,10 @@ public class Histogram_test {
         v.version5(picture, n, m);
         v.version5a(picture, n, m, Runtime.getRuntime().availableProcessors());
         picture.printShortHistogram();
-
     }
 
     static void v0(MyPicture picture) {
         picture.calculate_histogram();
         picture.print_histogram();
     }
-
 }

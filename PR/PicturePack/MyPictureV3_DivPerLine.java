@@ -22,7 +22,7 @@ public class MyPictureV3_DivPerLine extends MyPictureV2_DivPerCharBlock {
 
     public void printHistPartByPicLine() {
         for (var i : changedState) {
-            System.out.print("{" + Thread.currentThread().getName() + "} [" /*  */
+            System.out.print("{" + Thread.currentThread().getName() + "} ["
                     + String.format("%03d", i + 33) + "] "
                     + (char) (i + 33) + " "
                     + charsForNumberOfOccurrences(histogramIntArray[i]) + "\n");
@@ -39,5 +39,4 @@ public class MyPictureV3_DivPerLine extends MyPictureV2_DivPerCharBlock {
                         changedState.add(k);
                     }
     }
-
 }

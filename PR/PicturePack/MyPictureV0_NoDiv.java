@@ -24,5 +24,4 @@ public class MyPictureV0_NoDiv extends MyPictureBaseClass {
                     + " " + this.histogramIntArray[i] + "\n");
         }
     }
-
 }

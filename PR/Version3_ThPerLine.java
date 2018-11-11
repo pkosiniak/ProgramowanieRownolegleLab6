@@ -31,5 +31,4 @@ class Version3_ThPerLine {
             } catch (InterruptedException ignored) {
             }
     }
-
 }

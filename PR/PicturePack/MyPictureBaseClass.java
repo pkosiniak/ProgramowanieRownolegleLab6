@@ -4,14 +4,11 @@ import java.util.Random;
 
 public class MyPictureBaseClass {
 
-    //region init
-    //region fields
     final static int histogramSize = 94;
     int size_n;
     int size_m;
     char[][] pictureCharArray;
     int[] histogramIntArray = new int[histogramSize];
-    //endregion fields
 
     MyPictureBaseClass(int n, int m) {
 
@@ -34,24 +31,15 @@ public class MyPictureBaseClass {
     }
 
     public void clear_histogram() {
-        for (var i = 0; i < histogramSize; i++) this.getHistogramIntArray()[i] = 0;
+        for (var i = 0; i < histogramSize; i++)
+            this.getHistogramIntArray()[i] = 0;
     }
 
     public int[] getHistogramIntArray() {
         return histogramIntArray;
     }
 
-    public char[][] getPictureCharArray() {
-        return pictureCharArray;
-    }
-
-    //endregion init
-
-
-    //region common
-
     String charsForNumberOfOccurrences(int times) {
         return new String(new char[times]).replace("\0", "+");
     }
-    //endregion common
 }

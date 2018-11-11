@@ -5,11 +5,9 @@ import PR.PicturePack.MyPicture;
 
 public class HistogramThread_v2_PerCharBlock implements Runnable, HistogramThread {
 
-
-    //region init
     private Thread myThread;
     private int myTaskNumber;
-    private MyPicture picture;
+    private final MyPicture picture;
     private int part;
 
     public HistogramThread_v2_PerCharBlock(int taskNumber, int part, MyPicture picture) {
@@ -19,10 +17,7 @@ public class HistogramThread_v2_PerCharBlock implements Runnable, HistogramThrea
         myThread = new Thread(this, String.format("%02d", taskNumber));
         this.part = part;
     }
-    //endregion
 
-
-    //region ThreadThings
     @Override
     public void start() {
         myThread.start();
@@ -37,12 +32,7 @@ public class HistogramThread_v2_PerCharBlock implements Runnable, HistogramThrea
     public void run() {
         synchronized (picture) {
             picture.calculateHistogramPartByHA(myTaskNumber, part);
-//        }
-//        synchronized (picture) {
             picture.printHistogramPartByHA(myTaskNumber, part);
-
         }
-
     }
-    //endregion
 }

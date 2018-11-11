@@ -7,7 +7,7 @@ public class HistogramThread_v4_PerColumn implements Runnable, HistogramThread {
     private int numOfTask;
     private Thread myThread;
     private int myTaskNumber;
-    private MyPicture picture;
+    private final MyPicture picture;
     private int tCase;
 
     public HistogramThread_v4_PerColumn(int taskNumber, MyPicture picture) {
@@ -47,7 +47,6 @@ public class HistogramThread_v4_PerColumn implements Runnable, HistogramThread {
             default:
                 break;
         }
-
     }
 
     private void simpleV4() {
@@ -63,6 +62,4 @@ public class HistogramThread_v4_PerColumn implements Runnable, HistogramThread {
             picture.printHistPartByPicColumn();
         }
     }
-
-
 }

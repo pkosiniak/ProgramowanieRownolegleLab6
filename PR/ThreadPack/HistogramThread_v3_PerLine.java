@@ -8,7 +8,7 @@ public class HistogramThread_v3_PerLine implements Runnable, HistogramThread {
     private int numOfTasks;
     private Thread myThread;
     private int myTaskNumber;
-    private MyPicture picture;
+    private final MyPicture picture;
 
     public HistogramThread_v3_PerLine(int taskNumber, MyPicture picture) {
         this.picture = picture;
@@ -26,7 +26,6 @@ public class HistogramThread_v3_PerLine implements Runnable, HistogramThread {
 
         myThread = new Thread(this, String.format("%02d", taskNumber));
     }
-
 
     public void start() {
         myThread.start();
@@ -54,7 +53,6 @@ public class HistogramThread_v3_PerLine implements Runnable, HistogramThread {
         synchronized (picture) {
             picture.calculateHistPartByPicLine(myTaskNumber);
             picture.printHistPartByPicLine();
-
         }
     }
 
@@ -62,7 +60,6 @@ public class HistogramThread_v3_PerLine implements Runnable, HistogramThread {
         synchronized (picture) {
             picture.calculateHistPartByPicLine(myTaskNumber, numOfTasks);
             picture.printHistPartByPicLine();
-
         }
     }
 }

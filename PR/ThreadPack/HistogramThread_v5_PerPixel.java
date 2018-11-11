@@ -8,7 +8,7 @@ public class HistogramThread_v5_PerPixel implements Runnable, HistogramThread {
     private int mSize;
     private Thread myThread;
     private int nTaskNumber;
-    private MyPicture picture;
+    private final MyPicture picture;
     private int mTaskNumber;
     int tCase;
 

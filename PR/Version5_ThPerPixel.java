@@ -4,7 +4,7 @@ import PR.PicturePack.MyPicture;
 import PR.ThreadPack.HistogramThread;
 import PR.ThreadPack.HistogramThread_v5_PerPixel;
 
-public class Version5_ThPerPixel {
+class Version5_ThPerPixel {
     static void v5(int nThreads, int mThreads, MyPicture picture) {
 
         var histogramThArray = new HistogramThread[nThreads][mThreads];
@@ -13,7 +13,6 @@ public class Version5_ThPerPixel {
         for (var i = 0; i < nThreads; i++)
             for (var j = 0; j < mThreads; j++, c++)
                 (histogramThArray[i][j] = new HistogramThread_v5_PerPixel(i, j, c, picture)).start();
-
 
         for (var i = 0; i < nThreads; i++)
             for (var j = 0; j < mThreads; j++)
@@ -32,7 +31,6 @@ public class Version5_ThPerPixel {
         var m = (double) mSize / divider;
         m = (m % (int) m) == 0 ? (int) m : (int) m + 1;
 
-
         var histogramThArray = new HistogramThread[divider][divider];
 
         var c = 0;
@@ -43,10 +41,8 @@ public class Version5_ThPerPixel {
                         i, j, c, (int) n, (int) m, picture
                 )).start();
 
-
         for (var i = 0; i < divider; i++)
             for (var j = 0; j < divider; j++)
-
                 try {
                     histogramThArray[i][j].join();
                 } catch (InterruptedException ignored) {

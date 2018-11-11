@@ -14,7 +14,6 @@ import static PR.Version5_ThPerPixel.v5Seq;
 
 public class Versions {
     Versions() {
-
     }
 
     void version0(MyPicture picture) {
